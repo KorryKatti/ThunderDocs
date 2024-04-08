@@ -12,15 +12,15 @@ var getAll = function (selector, scope) {
 // setup typewriter effect in the terminal demo
 if (document.getElementsByClassName('demo').length > 0) {
   var i = 0;
-  var txt = `scribbler
-            [Entry mode; press Ctrl+D to save and quit; press Ctrl+C to quit without saving]
+  var txt = `Thunder
+            [Discover the app store for Python projects (more language support soon) with Thunder – your go-to platform for seamless deployment, automated updates, and vibrant community engagement. Explore now!]
 
-            ###todo for new year dinner party
+            ###todo for next update
 
-            - milk
-            - butter
-            - green onion
-            - lots and lots of kiwis 🥝`;
+            - Windows Compatibility
+            - Code Optimization
+            - Support for more languages
+            - and eating lots and lots of kiwis 🥝`;
   var speed = 60;
 
   function typeItOut () {
