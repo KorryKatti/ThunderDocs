@@ -129,9 +129,20 @@
         </div>
       </div>
     </div>
-    <footer class="footer">Scribbler is a free HTML template created exclusively for <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
+    <footer class="footer"><!--scribbler template from github-->&copy; <span id="year"></span> Thunder </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="scribbler.js"></script>
+
+
+
+    <!--year-->
+    <script>
+      // Get the current year
+      var currentYear = new Date().getFullYear();
+      // Display the current year in the footer
+      document.getElementById("year").textContent = currentYear;
+    </script>
+    <!--year-->
   </body>
 </html>
