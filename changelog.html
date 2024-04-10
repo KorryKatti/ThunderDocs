@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thunder Changelogs</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff; /* Blue color for the title */
+  }
+  #json-display {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    color: #333; /* Default color for JSON output */
+  }
+  .property {
+    color: #007bff; /* Blue color for property names */
+  }
+  .string {
+    color: #28a745; /* Green color for strings */
+  }
+  .number {
+    color: #dc3545; /* Red color for numbers */
+  }
+  .array {
+    color: #6610f2; /* Purple color for arrays */
+    margin-left: 20px;
+  }
+  .version {
+    margin-bottom: 10px;
+  }
+  .changes {
+    margin-left: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Thunder Changelogs</h1>
+
+<div id="json-display"></div>
+
+<script>
+  // Fetch JSON data from an external URL
+  fetch('https://korrykatti.github.io/thapps/data/changelog.json')
+    .then(response => response.json())
+    .then(data => {
+      // Display the JSON data
+      document.getElementById("json-display").innerHTML = syntaxHighlight(data);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      document.getElementById("json-display").innerHTML = 'Error fetching data';
+    });
+
+  // Function to syntax highlight JSON data
+  function syntaxHighlight(json) {
+    var result = '';
+    json.changelog.forEach(function(item) {
+      result += '<div class="version">Version: ' + item.version + '</div>';
+      result += '<div class="changes">';
+      item.changes.forEach(function(change) {
+        result += '<div>- <span class="string">' + change + '</span></div>';
+      });
+      result += '</div>';
+    });
+    return result;
+  }
+</script>
+
+</body>
+</html>
