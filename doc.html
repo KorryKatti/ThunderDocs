@@ -28,6 +28,7 @@
           <li class="js-btn">Configuration</li>
           <li class="js-btn">Keybindings</li>
           <li class="js-btn">Issues</li>
+          <li class="js-btn">Linux</li>
         </ul>
       </aside>
       <article class="doc__content">
@@ -90,10 +91,39 @@
           <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat, ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
           <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
         </section>
+        <section class="js-section">
+          <h3 class="section__title">Linux</h3>
+          <p>Thunder was developed on linux ( Arch Linux more specifically ) so it should work without any issues. However you might face one error on the first run that is <code>tk</code> not being installed.Here is guide to install that on all major linux OS
+            <ul>
+              <li>Ubuntu/Debian:
+                <pre><code>sudo apt-get install tk</code></pre>
+              </li>
+              <li>Fedora:
+                <pre><code>sudo dnf install tk</code></pre>
+              </li>
+              <li>CentOS/RHEL:
+                <pre><code>sudo yum install tk</code></pre>
+              </li>
+              <li>Arch Linux:
+                <pre><code>sudo pacman -S tk</code></pre>
+              </li>
+            </ul>
+            
+          </p>
+          <p>After installing it for your preferred linux distro you can run this code to download and run Thunder.
+            <div class="code__block code__block--notabs">
+              <pre class="code code--block">
+                <code>
+                  $  git clone https://github.com/KorryKatti/Thunder && cd Thunder && ./run.sh 
+                </code>
+              </pre>
+            </div>      
+            Does not require any admin privileges.Or you can download the .appimage file from here : <a href="https://github.com/KorryKatti/Thunder/releases" target="_blank" class="link link--light">Download</a>. Using the Appimage file is preferred as default method of installation requires to navigate to the directory everytime you wish to run Thunder.</p>
+        </section>
       </article>
     </div>
 
-    <footer class="footer">Thunder is a free HTML template created exclusively for <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
+    <footer class="footer">Thunder Docs by <a href="https://github.com/KorryKatti" target="_blank" class="link link--light">KorryKatti</a>.</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="scribbler.js"></script>
